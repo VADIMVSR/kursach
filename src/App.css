@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap');
+
+:root {
+  --neon-green: #00ff88;
+  --dark-purple: #2A004F;
+  --violet: #6A0DAD;
+  --blood-red: #8B0000;
+  --gothic-black: #0a0a0a;
+}
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--gothic-black);
+  color: #e0e0e0;
+  font-family: 'MedievalSharp', cursive;
+  min-height: 100vh;
+  line-height: 1.6;
+  width: 100%;
+}
+
+@keyframes title-glow {
+  0%, 100% { color: var(--neon-green); text-shadow: 0 0 10px var(--neon-green); }
+  50% { color: var(--violet); text-shadow: 0 0 20px var(--violet); }
+}
+
+@keyframes neon-pulse {
+  from { filter: drop-shadow(0 0 5px var(--neon-green)); }
+  to { filter: drop-shadow(0 0 20px var(--neon-green)); }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 50%, rgba(106, 13, 173, 0.1), rgba(0, 0, 0, 0.9));
+}
+
+header, footer {
+  width: 100%;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.gothic-header,
+.gothic-footer {
+  background: rgba(0, 0, 0, 0.95);
+  border: 3px solid var(--neon-green);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo-main {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3.5rem;
+  animation: title-glow 3s infinite;
+  letter-spacing: 0.3rem;
+  margin: 2rem 0;
+}
+
+.gothic-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.gothic-nav a {
+  color: var(--neon-green);
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--neon-green);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.gothic-nav a:hover {
+  background: rgba(0, 255, 136, 0.1);
+  box-shadow: 0 0 25px var(--neon-green);
+  transform: translateY(-3px);
+}
+
+.auth-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+  background: var(--dark-purple);
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-button:hover {
+  background: var(--violet);
+  box-shadow: 0 0 20px var(--neon-green);
+}
+
+.container {
+  flex: 1;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.gothic-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  justify-items: center;
+}
+
+.gothic-post,
+.post-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--neon-green);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
+  transition: 0.3s;
+}
+
+.gothic-post:hover,
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.gothic-post-title,
+.post-title {
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--violet);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(106, 13, 173, 0.5);
+}
+
+.post-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  color: var(--violet);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.post-excerpt {
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  color: var(--neon-green);
+  text-decoration: none;
+  border: 2px solid;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pagination button {
+  background: var(--dark-purple);
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pagination button:hover {
+  background: var(--violet);
+  box-shadow: 0 0 20px var(--neon-green);
+}
+
+.gothic-form,
+.add-post-form {
+  background: rgba(0, 0, 0, 0.9);
+  border: 3px solid var(--neon-green);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.form-title {
+  color: var(--neon-green);
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  color: var(--violet);
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.gothic-input {
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: 'MedievalSharp', cursive;
+  transition: all 0.3s ease;
+}
+
+.gothic-input:focus {
+  box-shadow: 0 0 20px var(--neon-green);
+  outline: none;
+}
+
+.submit-btn,
+.gothic-button {
+  background: var(--violet);
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.gothic-button:hover,
+.submit-btn:hover {
+  background: var(--dark-purple);
+  box-shadow: 0 0 30px var(--neon-green);
+  transform: scale(1.05);
+}
+
+.status-message {
+  padding: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.status-message.success {
+  background: rgba(0, 255, 136, 0.1);
+  color: var(--neon-green);
+  border: 2px solid var(--neon-green);
+}
+
+.status-message.error {
+  background: rgba(139, 0, 0, 0.1);
+  color: var(--blood-red);
+  border: 2px solid var(--blood-red);
+}
+
+.gothic-image {
+  border: 3px solid var(--neon-green);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+  animation: neon-pulse 2s infinite alternate;
+}
+
+.posts-grid,
+.posts-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.single-post .post-image {
+  max-height: 500px;
+  object-fit: contain;
+}
+
