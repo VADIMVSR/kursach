@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kursach/static/css/main.0808c117.css",
+    "main.js": "/kursach/static/js/main.9b9ddd30.js",
+    "index.html": "/kursach/index.html",
+    "main.0808c117.css.map": "/kursach/static/css/main.0808c117.css.map",
+    "main.9b9ddd30.js.map": "/kursach/static/js/main.9b9ddd30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0808c117.css",
+    "static/js/main.9b9ddd30.js"
+  ]
+}
