@@ -309,3 +309,50 @@ header, footer {
   object-fit: contain;
 }
 
+.delete-post-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.delete-post-btn:hover {
+  opacity: 0.8;
+}
+.image-preview-container {
+  margin-top: 1rem;
+  position: relative;
+  min-height: 150px;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+}
+
+.image-error {
+  color: #dc3545;
+  padding: 1rem;
+  text-align: center;
+}

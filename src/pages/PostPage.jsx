@@ -3,14 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PostPage = ({ posts }) => {
   const { id } = useParams();
-  
-  // Проверка валидности ID
-  const numericId = Number(id);
-  if (isNaN(numericId)) {
-    return <div className="error">Неверный идентификатор поста</div>;
-  }
-
-  const post = posts.find(p => p.id === numericId);
+  const post = posts.find(p => p._id === id);
 
   if (!post) return <div className="error">Пост не найден</div>;
 

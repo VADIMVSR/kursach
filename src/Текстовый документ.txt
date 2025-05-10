@@ -1,0 +1,23 @@
+ <!-- const [posts, setPosts] = useState([ // Массив постов
+    {
+      id:1,
+      title: 'Новый трейлер Cyberpunk 2077: Phantom Liberty',
+      imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      date: '15 октября 2024',
+      excerpt: 'CD Projekt Red представила новый трейлер долгожданного дополнения Phantom Liberty...'
+    },
+    {
+      id:2,
+      title: 'Apex побил рекорды по количеству игроков',
+      imageUrl: 'https://i.playground.ru/p/kdLZzYjvpiA_MNnbWxP-Yw.jpeg',
+      date: '6 мая 2025',
+      excerpt: 'В новом сезоне вас ждет обновленный BattlePass...'
+    },
+    {
+      id:3,
+      title: 'В Apex стартовал 25 сезон',
+      imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      date: '15 октября 2024',
+      excerpt: 'CD Projekt Red представила новый трейлер долгожданного дополнения Phantom Liberty...'
+    },
+      ]); -->
