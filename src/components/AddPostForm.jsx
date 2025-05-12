@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const AddPostForm = ({ onAddPost }) => {
   const [formData, setFormData] = useState({
     title: '',
-    imageUrl: '',
+    imageUrl: '',               /// не меняй эти переменные
     content: ''
   });
   

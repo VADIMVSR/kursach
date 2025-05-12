@@ -42,9 +42,9 @@ const PostSchema = new mongoose.Schema({
 const Post = mongoose.model('Post', PostSchema);
 
 app.use(cors({
-  origin: /http:\/\/localhost:3000$/,
+  origin: ['http://localhost:3001', 'http://localhost:3000'], // Разрешаем оба порта
   methods: 'GET,POST,DELETE',
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 
@@ -132,5 +132,5 @@ app.post('/api/posts', async (req, res) => {
 });
 
 // Запуск сервера
-const PORT = 5000;
+const PORT = 5001;
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));

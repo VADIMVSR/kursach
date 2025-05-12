@@ -133,6 +133,8 @@ const Header = ({ isAdmin, handleLogout, statusMessage }) => {
         {isAdmin ? 'Выйти' : 'Войти как администратор'}
       </button>
 
+      
+
       <div className="logo-main">
         {'GameNew'.split('').map((char, index) => (
           <span key={index}>{char}</span>
@@ -140,9 +142,15 @@ const Header = ({ isAdmin, handleLogout, statusMessage }) => {
       </div>
       
       <nav>
-        <ul>
-          <li><Link to="/">Главная</Link></li>
-          {isAdmin && <li><Link to="/admin">Админ-панель</Link></li>}
+      <ul style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          gap: '2rem',
+          padding: 0,
+          listStyle: 'none'
+        }}> 
+          <li><Link to="/" className='gothic-nav-link'>Главная</Link></li>
+          {isAdmin && <li><Link to="/admin" className='gothic-nav-link'>Админ-панель</Link></li>}
         </ul>
       </nav>
 
@@ -151,6 +159,7 @@ const Header = ({ isAdmin, handleLogout, statusMessage }) => {
           {statusMessage.message}
         </div>
       )}
+      
     </header>
   );
 };
