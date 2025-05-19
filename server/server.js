@@ -1,8 +1,10 @@
+import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import 'dotenv/config';;
-
+import authRoutes from './routes/authRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
+import { authMiddleware, adminMiddleware } from './middleware/auth.js';
 const app = express();
 
 // Подключение MongoDB
@@ -43,7 +45,7 @@ const Post = mongoose.model('Post', PostSchema);
 
 app.use(cors({
   origin: ['http://localhost:3001', 'http://localhost:3000'], // Разрешаем оба порта
-  methods: 'GET,POST,DELETE',
+  methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
@@ -131,6 +133,18 @@ app.post('/api/posts', async (req, res) => {
   }
 });
 
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Маршруты
+app.use('/api/auth', authRoutes);
+
+// Защищенный маршрут (пример)
+app.get('/secret', authMiddleware, adminMiddleware, (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.use('/api/admin', authMiddleware, adminMiddleware, adminRoutes);
 // Запуск сервера
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));
