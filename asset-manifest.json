@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kursach/static/css/main.0b0dcee4.css",
-    "main.js": "/kursach/static/js/main.7bd628a9.js",
+    "main.css": "/kursach/static/css/main.aabfeb0e.css",
+    "main.js": "/kursach/static/js/main.69224c87.js",
     "index.html": "/kursach/index.html",
-    "main.0b0dcee4.css.map": "/kursach/static/css/main.0b0dcee4.css.map",
-    "main.7bd628a9.js.map": "/kursach/static/js/main.7bd628a9.js.map"
+    "main.aabfeb0e.css.map": "/kursach/static/css/main.aabfeb0e.css.map",
+    "main.69224c87.js.map": "/kursach/static/js/main.69224c87.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b0dcee4.css",
-    "static/js/main.7bd628a9.js"
+    "static/css/main.aabfeb0e.css",
+    "static/js/main.69224c87.js"
   ]
 }
