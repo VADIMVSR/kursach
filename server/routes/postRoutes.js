@@ -19,8 +19,15 @@ router.get('/', async (req, res) => {
 // Создание поста (только для админов)
 router.post('/', authMiddleware, adminMiddleware, async (req, res) => {
   try {
-    const { title, content } = req.body;
-    const post = new Post({ title, content, author: req.user._id });
+        const { title, mainImageUrl, excerpt, gallery } = req.body;
+    
+    const post = new Post({
+      title,
+      mainImageUrl,
+      excerpt,
+      gallery: Array.isArray(gallery) ? gallery : []
+    });
+
     await post.save();
     res.status(201).json(post);
   } catch (error) {

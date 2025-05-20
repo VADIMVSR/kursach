@@ -84,8 +84,9 @@ export const getPosts = async () => {
 };
 
 export const addPost = (data) => {
-  console.log('Вызов addPost с данными:', data);
-  return api.post('/posts', data);
+  console.log('Вызов addPost с данными:', JSON.stringify(data));
+  return api.post('/posts', data, {
+  });
 };
 
 export const deletePost = (id) => {

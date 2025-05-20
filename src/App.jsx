@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
-import HomePage from './pages/HomePage.jsx';
+import PostsGrid from './components/PostsGrid.jsx';
 import AdminPage from './pages/AdminPage.jsx';
 import AdminPanel from './pages/AdminPanel.jsx';
 import LoginPage from './pages/LoginPage.jsx';
@@ -90,7 +90,7 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={<HomePage posts={posts} isAdmin={isAdmin} addPost={handleAddPost} deletePost={deletePost} />}
+              element={<PostsGrid posts={posts} isAdmin={isAdmin} addPost={handleAddPost} deletePost={deletePost} />}
             />
             <Route path="/post/:id" element={<PostPage posts={posts} />} />
             <Route path="/login" element={<LoginPage />} />

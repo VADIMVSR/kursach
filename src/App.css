@@ -329,7 +329,7 @@ header, footer {
 
 .delete-post-btn {
   position: absolute;
-  left: 500px;
+  right:5%;
   bottom: 30px;
   background: rgba(139, 0, 0, 0.2);
   color: var(--blood-red);
@@ -590,4 +590,120 @@ header, footer {
 .logout-btn:hover {
   background-color: #d32f2f;
   box-shadow: 0 0 15px rgba(244, 67, 54, 0.5);
+}
+.post-gallery {
+  margin: 2rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.main-post-image {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+.add-post-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.preview-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preview-image.selected {
+  border-color: #2196F3;
+  transform: scale(1.05);
+}
+
+.submit-btn {
+  background: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-btn:disabled {
+  background: #90CAF9;
+  cursor: not-allowed;
+}
+
+.current-main span {
+  word-break: break-all;
+  font-size: 0.9em;
+  color: #666;
+}
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 80px;
 }

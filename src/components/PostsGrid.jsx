@@ -23,7 +23,7 @@ const PostsGrid = ({ posts, isAdmin, deletePost }) => {
             )}
             {/* Добавляем значение по умолчанию для изображения */}
             <img 
-              src={post.imageUrl || '/placeholder-image.jpg'} 
+              src={post.mainImageUrl || '/placeholder-image.jpg'} 
               alt={post.title || 'Без названия'} 
               className="post-image" 
             />
